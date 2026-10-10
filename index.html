@@ -5,7 +5,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Индивидуальная подготовка к ОГЭ по математике для учеников 8–9 классов. Диагностика знаний, персональный план и системная работа над результатом.">
+  <meta name="description" content="Подготовка к ОГЭ по математике для учеников 8–9 классов: диагностика, индивидуальный план и поддержка на пути к нужному баллу. Более 5 лет преподавания.">
   <title>Людмила Антонова | Подготовка к ОГЭ по математике</title>
   <style>
     :root {
@@ -70,11 +70,11 @@
 
     .hero {
       display: grid;
-      grid-template-columns: 1.25fr 0.75fr;
-      gap: 45px;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 58px;
       align-items: center;
-      padding-top: 85px;
-      padding-bottom: 85px;
+      padding-top: 76px;
+      padding-bottom: 76px;
     }
 
     .eyebrow {
@@ -117,7 +117,7 @@
     .hero-art {
       background: #e9edf0;
       border-radius: 48% 52% 45% 55%;
-      min-height: 320px;
+      min-height: 300px;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -125,6 +125,7 @@
       text-align: center;
       transform: rotate(2deg);
       padding: 25px;
+      position: relative;
     }
 
     .formula {
@@ -141,7 +142,7 @@
       font-size: 15px;
     }
 
-    section { padding: 70px 0; }
+    section { padding: 76px 0; }
 
     .section-label {
       color: var(--blue);
@@ -197,7 +198,11 @@
       margin-bottom: 0;
     }
 
-    .process { background: #e9edf0; }
+    .process {
+      background: #edf0f1;
+      border-top: 1px solid #e2e7e9;
+      border-bottom: 1px solid #e2e7e9;
+    }
 
     .steps {
       display: grid;
@@ -214,34 +219,63 @@
 
     .about {
       display: grid;
-      grid-template-columns: 0.8fr 1.2fr;
-      gap: 50px;
-      align-items: start;
+      grid-template-columns: minmax(250px, 0.8fr) minmax(0, 1.2fr);
+      gap: clamp(36px, 6vw, 76px);
+      align-items: center;
+    }
+
+    .about-profile {
+      max-width: 320px;
+    }
+
+    .about h2 {
+      margin-bottom: 22px;
     }
 
     .about-photo {
       width: 100%;
-      max-width: 340px;
-      aspect-ratio: 3 / 4;
+      max-width: 285px;
+      aspect-ratio: 4 / 5;
       object-fit: cover;
-      object-position: center 35%;
+      object-position: center 32%;
       display: block;
-      border-radius: 12px;
-      margin-bottom: 22px;
+      border-radius: 14px;
+      margin-bottom: 16px;
       border: 1px solid var(--line);
+      box-shadow: 0 12px 30px rgba(32, 54, 80, 0.09);
     }
 
     .about-note {
       background: var(--green);
       border-radius: 10px;
-      padding: 25px;
-      font-size: 17px;
+      padding: 17px 20px;
+      font-size: 15px;
+      line-height: 1.55;
       font-weight: 650;
+      max-width: 285px;
+    }
+
+    .about-text {
+      padding: 8px 0;
+      max-width: 610px;
+    }
+
+    .about-text h3 {
+      font-size: clamp(25px, 3vw, 34px);
+      line-height: 1.25;
+      letter-spacing: -0.7px;
+      margin: 0 0 24px;
+      max-width: 560px;
     }
 
     .about-text p {
       color: var(--muted);
-      margin-top: 0;
+      margin: 0 0 18px;
+      font-size: 16px;
+    }
+
+    .about-text p:last-child {
+      margin-bottom: 0;
     }
 
     .contact {
@@ -274,6 +308,24 @@
   border: 1px solid #b8c8d7;
 }
 
+    .contact-details {
+      margin-top: 24px;
+    }
+
+    .contact-details p {
+      margin: 8px 0;
+      color: #dce3e9;
+    }
+
+    .contact-details a {
+      color: white;
+      text-underline-offset: 4px;
+    }
+
+    .contact-details span {
+      overflow-wrap: anywhere;
+    }
+
     footer {
       padding: 25px 0;
       color: var(--muted);
@@ -283,13 +335,17 @@
     @media (max-width: 760px) {
       .hero, .about {
         grid-template-columns: 1fr;
-        gap: 30px;
+        gap: 34px;
       }
 
-      .hero { padding-top: 55px; padding-bottom: 50px; }
-      .hero-art { min-height: 230px; }
+      .hero { padding-top: 52px; padding-bottom: 48px; }
+      .hero-art { min-height: 220px; max-width: 420px; margin: 0 auto; width: 100%; }
       .cards, .steps { grid-template-columns: 1fr; }
-      section { padding: 50px 0; }
+      section { padding: 52px 0; }
+      .about-profile { max-width: 100%; }
+      .about-photo { max-width: 300px; }
+      .about-note { max-width: 300px; }
+      .about-text { padding-top: 0; }
       .nav-links { gap: 12px; }
       .nav-links a { font-size: 12px; }
       .logo { font-size: 16px; }
@@ -306,6 +362,7 @@
       <div class="nav-links">
         <a href="#approach">Подход</a>
         <a href="#about">Обо мне</a>
+        <a href="#format">Формат и стоимость</a>
       </div>
     </nav>
   </div>
@@ -341,45 +398,43 @@
 
   <section id="approach">
     <div class="container">
-      <div class="section-label">Мой подход</div>
-
-      <h2>Не просто решаем варианты</h2>
-
+      <div class="section-label">Мои принципы</div>
+      <h2>Подготовка с пониманием и планом</h2>
       <p class="section-intro">
-        Эффективная подготовка начинается с понимания стартовой точки.
-        Мы определяем, что ученик уже умеет, какие темы требуют внимания
-        и как лучше распределить время до экзамена.
+        Мы не просто решаем задачи одну за другой. Мы идём к конкретной цели —
+        результату ОГЭ, который нужен ученику, — и понимаем, зачем нужен каждый шаг.
       </p>
 
       <div class="cards">
-
         <article class="card">
-          <div class="number">01 / ДИАГНОСТИКА</div>
-          <h3>Находим пробелы</h3>
+          <div class="number">01 / УВЕРЕННОСТЬ</div>
+          <h3>Математика без страха</h3>
           <p>
-            Проверяем знания по основным темам, вычислительные навыки
-            и умение решать задачи. Определяем, что мешает двигаться дальше.
+            Помогаю снизить напряжение и почувствовать, что математика по силам.
+            Разбираем сложные темы постепенно, спокойно относимся к ошибкам
+            и учимся замечать собственные успехи.
           </p>
         </article>
 
         <article class="card">
-          <div class="number">02 / СТРАТЕГИЯ</div>
-          <h3>Строим маршрут</h3>
+          <div class="number">02 / МАРШРУТ</div>
+          <h3>Чёткий план до цели</h3>
           <p>
-            Выбираем приоритетные темы, ставим промежуточные цели
-            и составляем план занятий с учётом времени до ОГЭ.
+            Определяем стартовый уровень и желаемый балл, составляем план подготовки.
+            На каждом уроке понимаем, что уже освоено, где мы находимся
+            и что предстоит пройти дальше.
           </p>
         </article>
 
         <article class="card">
-          <div class="number">03 / ПРОГРЕСС</div>
-          <h3>Работаем на результат</h3>
+          <div class="number">03 / ИНДИВИДУАЛЬНЫЙ ПОДХОД</div>
+          <h3>Учитываем особенности ученика</h3>
           <p>
-            Закрепляем материал, разбираем ошибки и регулярно проверяем
-            прогресс, корректируя план по мере необходимости.
+            У каждого свой темп и свой способ воспринимать информацию.
+            Я учитываю внимательность к деталям, логическое и пространственное
+            мышление, подбирая объяснения и задания под конкретного ребёнка.
           </p>
         </article>
-
       </div>
     </div>
   </section>
@@ -418,35 +473,61 @@
     </div>
   </section>
 
+  <section id="format">
+    <div class="container">
+      <div class="section-label">Формат и стоимость</div>
+      <h2>Понятные условия с самого начала</h2>
+      <div class="cards">
+        <article class="card">
+          <div class="number">ПЕРВОЕ ЗНАКОМСТВО</div>
+          <h3>Диагностическое занятие</h3>
+          <p>
+            30 минут · бесплатно. Познакомимся, обсудим цель подготовки
+            и предварительно определим, на что стоит обратить внимание.
+          </p>
+          <div class="price">Бесплатно</div>
+        </article>
+        <article class="card">
+          <div class="number">ИНДИВИДУАЛЬНО</div>
+          <h3>Занятие по математике</h3>
+          <p>
+            50 минут. Работаем по индивидуальному плану подготовки
+            к ОГЭ и отслеживаем прогресс.
+          </p>
+          <div class="price">1 000 ₽</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
   <section id="about">
     <div class="container about">
-      <div>
+      <div class="about-profile">
         <div class="section-label">О преподавателе</div>
         <h2>Людмила Антонова</h2>
         <img class="about-photo" src="ludmila-photo.jpg"
              alt="Людмила Антонова, преподаватель математики">
-
         <div class="about-note">
           PhD по экономике<br>
-          Математическая подготовка и аналитический подход
+          Более 5 лет преподавания
         </div>
       </div>
 
       <div class="about-text">
+        <h3>Объяснять сложное понятно и помогать двигаться вперёд</h3>
         <p>
-          Я считаю, что в математике важно не только запомнить формулу,
-          но и понять, почему она работает и когда её применять.
+          У меня более пяти лет опыта преподавания в разных направлениях:
+          математики, аналитики данных и основ Python для детей.
         </p>
-
         <p>
-          На занятиях мы последовательно разбираем материал, учимся
-          видеть логику решения и спокойно работать с ошибками.
+          Математическая подготовка и опыт работы с разными учениками помогают
+          мне видеть не только правильный ответ, но и ход рассуждений:
+          на каком шаге возникла трудность и какое объяснение поможет разобраться.
         </p>
-
         <p>
-          Моя задача не в том, чтобы просто показать правильный ответ,
-          а в том, чтобы ученик постепенно научился решать самостоятельно
-          и понимал, как двигаться дальше.
+          На занятиях мы учимся решать самостоятельно, анализировать ошибки
+          и понимать логику решения. Моя задача — не просто показать способ,
+          а помочь ученику освоить его и уверенно применять.
         </p>
       </div>
     </div>
@@ -456,16 +537,14 @@
     <div class="container">
       <div class="section-label">Связаться со мной</div>
       <h2>Обсудим подготовку к ОГЭ?</h2>
-      <div class="contact-links">
-        <a class="button" href="mailto:liudm.antonova@gmail.com">
-          ✉️ liudm.antonova@gmail.com
-        </a>
-        <a class="button telegram"
-           href="https://t.me/lud_ant"
-           target="_blank"
-           rel="noopener noreferrer">
-          ✈️ Telegram: @lud_ant
-        </a>
+      <p>
+        Напишите, в каком классе учится ребёнок и к какому результату
+        вы хотите прийти. Вместе определим, с чего лучше начать подготовку.
+      </p>
+      <div class="contact-details">
+        <p>Email: <span>liudm.antonova@gmail.com</span></p>
+        <p>Telegram: <a href="https://t.me/lud_ant"
+           target="_blank" rel="noopener noreferrer">@lud_ant</a></p>
       </div>
     </div>
   </section>
