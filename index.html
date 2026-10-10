@@ -243,11 +243,23 @@
       max-width: 620px;
     }
 
-    .contact .button {
-      background: white;
-      color: var(--navy);
-      margin-top: 12px;
-    }
+   .contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.contact .button {
+  background: white;
+  color: var(--navy);
+}
+
+.contact .button.telegram {
+  background: transparent;
+  color: white;
+  border: 1px solid #b8c8d7;
+}
 
     footer {
       padding: 25px 0;
@@ -438,10 +450,17 @@
         Вместе определим, с чего лучше начать подготовку.
       </p>
 
-      <!-- Позже вставим сюда твою ссылку на Telegram -->
-      <a class="button" href="mailto:">
-        Связаться с преподавателем
-      </a>
+<div class="contact-links">
+  <a class="button" href="mailto:liudm.antonova@gmail.com">
+    Написать на email
+  </a>
+  <a class="button telegram"
+     href="https://t.me/lud_ant"
+     target="_blank"
+     rel="noopener noreferrer">
+    Написать в Telegram · @lud_ant
+  </a>
+</div>
     </div>
   </section>
 
