@@ -1,0 +1,462 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Индивидуальная подготовка к ОГЭ по математике для учеников 8–9 классов. Диагностика знаний, персональный план и системная работа над результатом.">
+  <title>Людмила Антонова | Подготовка к ОГЭ по математике</title>
+  <style>
+    :root {
+      --navy: #203650;
+      --blue: #496c91;
+      --cream: #f8f6f0;
+      --white: #ffffff;
+      --green: #dce7d6;
+      --muted: #687584;
+      --line: #e1e3e2;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                   Arial, sans-serif;
+      color: var(--navy);
+      background: var(--cream);
+      line-height: 1.65;
+    }
+
+    a { color: inherit; }
+
+    .container {
+      width: min(1080px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 22px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 19px;
+      font-weight: 750;
+      letter-spacing: -0.5px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 45px;
+      align-items: center;
+      padding-top: 85px;
+      padding-bottom: 85px;
+    }
+
+    .eyebrow {
+      color: var(--blue);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 12px;
+      font-weight: 750;
+    }
+
+    h1 {
+      font-size: clamp(39px, 5.5vw, 65px);
+      line-height: 1.1;
+      letter-spacing: -2px;
+      margin: 22px 0;
+    }
+
+    h1 span { color: var(--blue); }
+
+    .lead {
+      color: var(--muted);
+      font-size: 18px;
+      max-width: 590px;
+      margin-bottom: 30px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 13px 21px;
+      border-radius: 7px;
+      background: var(--navy);
+      color: white;
+      text-decoration: none;
+      font-weight: 650;
+      font-size: 15px;
+    }
+
+    .button:hover { background: var(--blue); }
+
+    .hero-art {
+      background: #e9edf0;
+      border-radius: 48% 52% 45% 55%;
+      min-height: 320px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      transform: rotate(2deg);
+      padding: 25px;
+    }
+
+    .formula {
+      font-family: Georgia, serif;
+      font-size: clamp(30px, 4vw, 44px);
+      line-height: 1.5;
+      transform: rotate(-2deg);
+    }
+
+    .formula small {
+      display: block;
+      color: var(--blue);
+      font-family: inherit;
+      font-size: 15px;
+    }
+
+    section { padding: 70px 0; }
+
+    .section-label {
+      color: var(--blue);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 12px;
+      font-weight: 750;
+    }
+
+    h2 {
+      font-size: clamp(30px, 4vw, 43px);
+      letter-spacing: -1.2px;
+      line-height: 1.2;
+      margin: 12px 0 18px;
+    }
+
+    .section-intro {
+      color: var(--muted);
+      font-size: 17px;
+      max-width: 680px;
+      margin-bottom: 35px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 26px;
+    }
+
+    .number {
+      color: var(--blue);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    h3 {
+      font-size: 20px;
+      line-height: 1.35;
+      margin: 15px 0 10px;
+    }
+
+    .card p, .step p {
+      color: var(--muted);
+      font-size: 15px;
+      margin-bottom: 0;
+    }
+
+    .process { background: #e9edf0; }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    .step {
+      border-top: 1px solid #b8c5cf;
+      padding-top: 18px;
+    }
+
+    .step strong { font-size: 18px; }
+
+    .about {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 50px;
+      align-items: start;
+    }
+
+    .about-note {
+      background: var(--green);
+      border-radius: 10px;
+      padding: 25px;
+      font-size: 17px;
+      font-weight: 650;
+    }
+
+    .about-text p {
+      color: var(--muted);
+      margin-top: 0;
+    }
+
+    .contact {
+      background: var(--navy);
+      color: white;
+    }
+
+    .contact .section-label { color: #cbd9e5; }
+
+    .contact p {
+      color: #dce3e9;
+      max-width: 620px;
+    }
+
+    .contact .button {
+      background: white;
+      color: var(--navy);
+      margin-top: 12px;
+    }
+
+    footer {
+      padding: 25px 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    @media (max-width: 760px) {
+      .hero, .about {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .hero { padding-top: 55px; padding-bottom: 50px; }
+      .hero-art { min-height: 230px; }
+      .cards, .steps { grid-template-columns: 1fr; }
+      section { padding: 50px 0; }
+      .nav-links { gap: 12px; }
+      .nav-links a { font-size: 12px; }
+      .logo { font-size: 16px; }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container">
+    <nav>
+      <div class="logo">Людмила Антонова</div>
+      <div class="nav-links">
+        <a href="#approach">Подход</a>
+        <a href="#about">Обо мне</a>
+        <a href="#contact">Контакты</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <div class="container hero">
+    <div>
+      <div class="eyebrow">Математика · 8–9 класс · онлайн</div>
+
+      <h1>
+        Подготовка к ОГЭ<br>
+        с понятным <span>планом</span>
+      </h1>
+
+      <p class="lead">
+        Сначала выясняем, что уже получается и где есть пробелы.
+        Затем выстраиваем индивидуальную стратегию подготовки
+        к ОГЭ с учётом текущего уровня и желаемого результата.
+      </p>
+
+      <a class="button" href="#contact">Обсудить подготовку</a>
+    </div>
+
+    <div class="hero-art" aria-hidden="true">
+      <div class="formula">
+        x² + y² = ?
+        <small>Разберёмся шаг за шагом</small>
+      </div>
+    </div>
+  </div>
+
+  <section id="approach">
+    <div class="container">
+      <div class="section-label">Мой подход</div>
+
+      <h2>Не просто решаем варианты</h2>
+
+      <p class="section-intro">
+        Эффективная подготовка начинается с понимания стартовой точки.
+        Мы определяем, что ученик уже умеет, какие темы требуют внимания
+        и как лучше распределить время до экзамена.
+      </p>
+
+      <div class="cards">
+
+        <article class="card">
+          <div class="number">01 / ДИАГНОСТИКА</div>
+          <h3>Находим пробелы</h3>
+          <p>
+            Проверяем знания по основным темам, вычислительные навыки
+            и умение решать задачи. Определяем, что мешает двигаться дальше.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="number">02 / СТРАТЕГИЯ</div>
+          <h3>Строим маршрут</h3>
+          <p>
+            Выбираем приоритетные темы, ставим промежуточные цели
+            и составляем план занятий с учётом времени до ОГЭ.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="number">03 / ПРОГРЕСС</div>
+          <h3>Работаем на результат</h3>
+          <p>
+            Закрепляем материал, разбираем ошибки и регулярно проверяем
+            прогресс, корректируя план по мере необходимости.
+          </p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="process">
+    <div class="container">
+      <div class="section-label">Как проходят занятия</div>
+
+      <h2>От понимания к самостоятельному решению</h2>
+
+      <div class="steps">
+        <div class="step">
+          <strong>Разбираемся</strong>
+          <p>
+            Восстанавливаем теорию и разбираем решение задачи
+            по понятным последовательным шагам.
+          </p>
+        </div>
+
+        <div class="step">
+          <strong>Тренируемся</strong>
+          <p>
+            Решаем задачи вместе, затем ученик применяет
+            изученный метод самостоятельно.
+          </p>
+        </div>
+
+        <div class="step">
+          <strong>Анализируем ошибки</strong>
+          <p>
+            Учимся находить причины ошибок и понимаем,
+            что нужно повторить перед следующей темой.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container about">
+      <div>
+        <div class="section-label">О преподавателе</div>
+        <h2>Людмила Антонова</h2>
+
+        <div class="about-note">
+          PhD по экономике<br>
+          Математическая подготовка и аналитический подход
+        </div>
+      </div>
+
+      <div class="about-text">
+        <p>
+          Я считаю, что в математике важно не только запомнить формулу,
+          но и понять, почему она работает и когда её применять.
+        </p>
+
+        <p>
+          На занятиях мы последовательно разбираем материал, учимся
+          видеть логику решения и спокойно работать с ошибками.
+        </p>
+
+        <p>
+          Моя задача не в том, чтобы просто показать правильный ответ,
+          а в том, чтобы ученик постепенно научился решать самостоятельно
+          и понимал, как двигаться дальше.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-label">Первый шаг</div>
+
+      <h2>Обсудим подготовку к ОГЭ?</h2>
+
+      <p>
+        Напишите, в каком классе учится ребёнок, какой результат
+        вы хотели бы получить и какие темы сейчас вызывают трудности.
+        Вместе определим, с чего лучше начать подготовку.
+      </p>
+
+      <!-- Позже вставим сюда твою ссылку на Telegram -->
+      <a class="button" href="mailto:">
+        Связаться с преподавателем
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    © <span id="year"></span> Людмила Антонова · Подготовка к ОГЭ по математике
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent =
+    new Date().getFullYear();
+</script>
+
+</body>
+</html>
