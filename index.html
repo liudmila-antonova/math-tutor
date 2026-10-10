@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -218,6 +219,18 @@
       align-items: start;
     }
 
+    .about-photo {
+      width: 100%;
+      max-width: 340px;
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+      object-position: center 35%;
+      display: block;
+      border-radius: 12px;
+      margin-bottom: 22px;
+      border: 1px solid var(--line);
+    }
+
     .about-note {
       background: var(--green);
       border-radius: 10px;
@@ -410,6 +423,8 @@
       <div>
         <div class="section-label">О преподавателе</div>
         <h2>Людмила Антонова</h2>
+        <img class="about-photo" src="ludmila-photo.jpg"
+             alt="Людмила Антонова, преподаватель математики">
 
         <div class="about-note">
           PhD по экономике<br>
